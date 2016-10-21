@@ -1,0 +1,24 @@
+{
+  "author" : "",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "name" : "pseudo-localize",
+      "handlers" : {
+        "run" : "onRun"
+      },
+      "identifier" : "com.bohemiancoding.sketch.runscriptidentifier"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "com.bohemiancoding.sketch.runscriptidentifier"
+    ],
+    "title" : "pseudo-localize"
+  },
+  "identifier" : "com.example.sketch.e170fbac-9ef2-48a4-80c9-53eb8cbc1ec9",
+  "version" : "1.0",
+  "description" : "",
+  "authorEmail" : "",
+  "name" : "pseudo-localize"
+}

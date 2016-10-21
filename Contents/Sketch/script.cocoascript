@@ -1,0 +1,35 @@
+// pseudo-localize (ctrl `)
+var onRun = function(context) {
+  
+  function pseudoLocalize(string) {
+    var chars = "介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소иЗ介นşрωtبčنごдčש帳าаůсחое簡üγกвцΕ戶н客иез개介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소иЗ介นşрωtبčنごдčש帳าаůсחое簡üγกвцΕ戶н客иез개介引户הаí先ร简аน取정úσιмÜП介мのαşแةбй계ذะяřт紹소иЗ介นşрωtبčنごдčש帳าаůсחое簡üγกвцΕ戶н客иез개" 
+
+    var length = string.length;
+    if (length > 100) {
+      length = length * 0.2 - 1;
+    } else if (length > 12) {
+      length = length * 0.3 - 1;
+    } else if (length > 5) {
+      length = length * 0.4 - 1;
+    } else if (length > 0) {
+      length = length * 1 - 1;
+    }
+    var translation = "[" + string + "]" + chars.slice(0, length) + "]"
+
+    return translation;
+  } 
+  
+  var layer = context.selection[0];
+  var textArray = [layer stringValue].split("\n");
+  for (var i = 0; i < textArray.length; i++) {
+    textArray[i] = pseudoLocalize(textArray[i])
+  }
+
+  var translation = textArray.join("\n")
+
+  if (translation) {
+    [layer setStringValue:translation]; 
+  }
+
+
+};
