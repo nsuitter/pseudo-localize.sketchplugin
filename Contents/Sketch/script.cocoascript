@@ -6,13 +6,13 @@ var onRun = function(context) {
 
         var length = string.length;
         if (length > 100) {
-            length = length * 0.2 - 1;
+            length = length * 0.3;
         } else if (length > 12) {
-            length = length * 0.3 - 1;
+            length = length * 0.4;
         } else if (length > 5) {
-            length = length * 0.4 - 1;
+            length = length * 0.5;
         } else if (length > 0) {
-            length = length * 1 - 1;
+            length = length * 1.2;
         }
         if (length != 0) {
             var translation = "[" + string + "]" + chars.slice(0, length) + "]"
@@ -44,7 +44,7 @@ var onRun = function(context) {
                 var translation = textArray.join("\n")
                 if (translation) {
                     [layer setStringValue:translation];
-                    //layer.resizeToFitContents()
+                    layer.adjustFrameToFit()
                 }
             }
         }
